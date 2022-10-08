@@ -39,11 +39,21 @@
         </nav>
         <ul class="nav-contacts">
           <li>
+           
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.5 0H1.50001C0.672854 0 0 0.672853 0 1.50001V10.5C0 11.3271 0.672854 12 1.50001 12H14.5C15.3271 12 16 11.3271 16 10.5V1.50001C16 0.672853 15.3271 0 14.5 0ZM14.5 0.999994C14.5679 0.999994 14.6325 1.01409 14.6916 1.0387L8 6.83838L1.30833 1.0387C1.36742 1.01412 1.43204 0.999994 1.49998 0.999994H14.5ZM14.5 11H1.50001C1.22414 11 0.999996 10.7759 0.999996 10.5V2.09521L7.67236 7.87792C7.76661 7.95944 7.8833 7.99999 8 7.99999C8.1167 7.99999 8.23339 7.95948 8.32764 7.87792L15 2.09521V10.5C15 10.7759 14.7759 11 14.5 11Z" fill="#757575"/>
+              </svg>
+               <svg class="icon-envelope">
+              <use href="./images/sprite1.svg#envelope"></use>
+            </svg>
             <a class="contacts" href="mailto:info@devstudio.com" lang="en"
               >info@devstudio.com</a
             >
           </li>
           <li>
+            <svg class="icon-smartphon">
+              <use href="./images/sprite1.svg#smartphon"></use>
+            </svg>
             <a class="contacts" href="tel:+380961111111">+38 096 111 11 11</a>
           </li>
         </ul>
@@ -51,39 +61,41 @@
     </header>
     <main>
       <!--Секция герой-->
-              <section class="hero">
-                <div class="container"></div>
-          <h1 class="hero-title">ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-button" type="button">Замовити послугу</button>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-overlay">
+            <h1 class="hero-title">ефективні рішення для вашого бізнесу</h1>
+            <button class="hero-button" type="button">Замовити послугу</button>
+          </div>
         </div>
-        </section>
-      
+      </section>
+
       <!--Секция 2-->
       <section class="section">
         <div class="container">
           <h2 class="visually-hidden">секция 2</h2>
           <ul class="section-lists">
-            <li>
+            <li class="benefits-icon icon-antenna">
               <h3 class="benefits-title">УВАГА ДО ДЕТАЛЕЙ</h3>
               <p class="benefits-text">
                 Ідейні міркування, і навіть початок повсякденної роботи з
                 формування позиції.
               </p>
             </li>
-            <li>
+            <li class="benefits-icon icon-clock">
               <h3 class="benefits-title">ПУНКТУАЛЬНІСТЬ</h3>
               <p class="benefits-text">
                 Завдання організації, особливо рамки і місце навчання кадрів
                 тягне у себе.
               </p>
             </li>
-            <li>
+            <li class="benefits-icon icon-diagram">
               <h3 class="benefits-title">ПЛАНУВАННЯ</h3>
               <p class="benefits-text">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <li>
+            <li class="benefits-icon icon-astronaut">
               <h3 class="benefits-title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
               <p class="benefits-text">
                 Значимість цих проблем настільки очевидна, що реалізація
@@ -166,6 +178,44 @@
           </ul>
         </div>
       </section>
+      <!--Постійні клієнти-->
+      <section class="section clients">
+        <div class="container">
+          <h2 class="title">Постійні клієнти</h2>
+          <ul class="section-lists">
+            <li>
+              <svg>
+                <use href="./images/sprite1.svg#company-yaco"></use>
+              </svg>
+            </li>
+            <li>
+              <svg>
+                <use href="./images/sprite1.svg#company-tagline"></use>
+              </svg>
+            </li>
+            <li>
+              <svg>
+                <use href="./images/sprite1.svg#company"></use>
+              </svg>
+            </li>
+            <li>
+              <svg>
+                <use href="./images/sprite1.svg#company-foster"></use>
+              </svg>
+            </li>
+            <li>
+              <svg>
+                <use href="./images/sprite1.svg#company-brand"></use>
+              </svg>
+            </li>
+            <li>
+              <svg>
+                <use href="./images/sprite1.svg#company-line"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">
@@ -198,6 +248,16 @@
             </li>
           </ul>
         </address>
+
+        <div class="socials-list">
+          <p class="socials">приєднуйтесть</p>
+          <ul>
+            <li class="icon-socials">jhv</li>
+            <li class="icon-socials">bsdv</li>
+            <li class="icon-socials">vdhgv</li>
+            <li class="icon-socials">cdv</li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>

@@ -127,13 +127,31 @@ nav .current {
 .nav-contacts > li:not(:last-child) {
   margin-right: 50px;
 }
-
+.icon-envelope{
+  width: 16px;
+  height: 12px;
+  fill: red;
+}
+.icon-smartphon{
+  width: 10px;
+  height: 16px;
+}
 /*hero*/
 .hero {
   padding: 200px 0;
   background-color: var(--color-backdark);
   text-align: center;
-}
+
+  height: 600px;
+    background-image: linear-gradient(
+    to right,
+     rgba(47, 48, 58, 0.4),
+     rgba(47, 48, 58, 0.4)),
+      url(../images/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+    }
 .hero-title {
   margin: 0 auto;
   width: 696px;
@@ -173,6 +191,28 @@ nav .current {
   padding-bottom: 94px;
 }
 /*Секція 2*/
+
+.benefits-icon::before{
+  content: '';
+  display: block;
+  background-color: var(--color-background);
+  height: 120px;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-antenna::before{
+  background-image: url(../images/antenna.svg);
+}
+.icon-clock::before{
+  background-image: url(../images/clock.svg);
+ }
+.icon-diagram::before{
+  background-image: url(../images/diagram.svg);
+ }
+.icon-astronaut::before{
+  background-image: url(../images/astronaut.svg);
+}
 
 .benefits-title {
   margin-bottom: 10px;
@@ -227,7 +267,7 @@ nav .current {
 
   font-weight: 500;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.19;
   text-align: center;
   color: var(--color-primary);
 }
@@ -235,10 +275,14 @@ nav .current {
   margin-bottom: 0px;
 
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.19;
   text-align: center;
   color: var(--color-second);
 }
+/*Секція Постійні клієнти*/
+
+
+
 /*Секція Приклади робіт*/
 .works-button-list {
   display: flex;
@@ -270,7 +314,7 @@ nav .current {
 .works-button:focus {
   color: var(--color-fone);
   background-color: var(--color-active);
-}
+  }
 
 .works-container {
   display: flex;
@@ -280,6 +324,10 @@ nav .current {
 
 .works-container-element:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+.works-container-element:hover,
+.works-container-element:focus{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .works-box {
   padding: 24px 20px;
@@ -350,3 +398,13 @@ nav .current {
 .footer-contacts:focus {
   color: var(--color-active);
 }
+.socials-list{
+  display: flex;
+  }
+.socials{
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--color-fone);
+}
+
