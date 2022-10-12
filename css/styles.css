@@ -127,15 +127,17 @@ nav .current {
 .nav-contacts > li:not(:last-child) {
   margin-right: 50px;
 }
-.icon-envelope{
+.icon-envelope {
   width: 16px;
   height: 12px;
-  fill: red;
-}
-.icon-smartphon{
+  cursor: pointer;
+ }
+.icon-smartphon {
   width: 10px;
   height: 16px;
+  cursor: pointer;
 }
+
 /*hero*/
 .hero {
   padding: 200px 0;
@@ -279,6 +281,9 @@ nav .current {
   text-align: center;
   color: var(--color-second);
 }
+.name-socials{
+
+}
 /*Секція Постійні клієнти*/
 
 
@@ -357,6 +362,7 @@ nav .current {
   background-color: var(--color-backdark);
 }
 .footer-list {
+  display: inline-block;
   margin-top: 20px;
 }
 .logo-footer {
