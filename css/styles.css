@@ -7,6 +7,7 @@
   --color-logo: #000;
   --color-backdark: #2f303a;
   --color-hero: #188ce8;
+  --color-svg: #AFB1B8;
   --main-font: "Roboto", sans-serif;
 }
 body {
@@ -131,11 +132,19 @@ nav .current {
   width: 16px;
   height: 12px;
   cursor: pointer;
+  fill: var(--color-second);
  }
 .icon-smartphon {
   width: 10px;
   height: 16px;
   cursor: pointer;
+  fill: var(--color-second);
+}
+.hover-envelope:hover svg{
+   fill: var(--color-active);
+}
+.hover-smartphon:hover svg{
+  fill: var(--color-active);
 }
 
 /*hero*/
@@ -274,19 +283,61 @@ nav .current {
   color: var(--color-primary);
 }
 .profy {
-  margin-bottom: 0px;
+  margin-bottom: 16px;
 
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   color: var(--color-second);
 }
-.name-socials{
-
-}
+.icon-position{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  
+  }
+  .meta{
+    width: 44px;
+    height: 44px;   
+    border-radius: 50%;
+    
+    fill: var(--color-svg);
+  }
+  .name-socials:hover .meta{
+    fill: var(--color-fone);
+    background: var(--color-active);
+  }
 /*Секція Постійні клієнти*/
 
+.clients-lists{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  cursor: pointer;
+}
+.clients-lists li{
+width: 170px;
+height: 92px;
+border: 1px solid #AFB1B8;
+border-radius: 4px;
 
+}
+
+.client{
+  width: 44px;
+  height: 44px;
+  fill: var(--color-svg);
+  
+  position: relative;
+  top: 50%;
+  left: 50%;
+}
+.clients-lists li:hover{
+  border: 1px solid #188ce8;
+}
+.clients-lists li:hover .client{
+  fill: var(--color-active);
+}
 
 /*Секція Приклади робіт*/
 .works-button-list {
@@ -404,13 +455,29 @@ nav .current {
 .footer-contacts:focus {
   color: var(--color-active);
 }
-.socials-list{
-  display: flex;
-  }
+.socials-box{
+  margin-left: 516px;
+ 
+}
 .socials{
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--color-fone);
 }
+.footer-list{
+  display: flex;
+  gap: 10px;
+}
 
+.footer-meta{
+  
+  width: 44px;
+  height: 44px;
+  fill: var(--color-fone);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.footer-meta:hover {
+background-color: var(--color-active);
+}
