@@ -7,7 +7,7 @@
   --color-logo: #000;
   --color-backdark: #2f303a;
   --color-hero: #188ce8;
-  --color-svg: #AFB1B8;
+  --color-svg: #afb1b8;
   --main-font: "Roboto", sans-serif;
 }
 body {
@@ -42,6 +42,9 @@ ul {
 a {
   text-decoration: none;
 }
+a:focus {
+  outline: none;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -62,8 +65,8 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
-.nav{
-  border-bottom: 1px solid #eeeeee; 
+.nav {
+  border-bottom: 1px solid #eeeeee;
 }
 .main-nav {
   display: flex;
@@ -103,15 +106,16 @@ nav .current {
   cursor: pointer;
 }
 .nav-page:hover {
-  color: var(--color-active);
+  color: var(--color-hero);
 }
 .nav-page:focus {
-  color: var(--color-active);
+  color: var(--color-hero);
 }
 
 .contacts {
   font-weight: 500;
   line-height: 1.1;
+
   color: var(--color-second);
   cursor: pointer;
 }
@@ -131,20 +135,14 @@ nav .current {
 .icon-envelope {
   width: 16px;
   height: 12px;
-  cursor: pointer;
-  fill: var(--color-second);
- }
+  margin-right: 10px;
+  fill: currentColor;
+}
 .icon-smartphon {
   width: 10px;
   height: 16px;
-  cursor: pointer;
-  fill: var(--color-second);
-}
-.hover-envelope:hover svg{
-   fill: var(--color-active);
-}
-.hover-smartphon:hover svg{
-  fill: var(--color-active);
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /*hero*/
@@ -152,17 +150,19 @@ nav .current {
   padding: 200px 0;
   background-color: var(--color-backdark);
   text-align: center;
-
+  max-width: 1600px;
   height: 600px;
-    background-image: linear-gradient(
-    to right,
-     rgba(47, 48, 58, 0.4),
-     rgba(47, 48, 58, 0.4)),
-      url(../images/hero.jpg);
+  margin: 0 auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-    }
+}
 .hero-title {
   margin: 0 auto;
   width: 696px;
@@ -203,8 +203,8 @@ nav .current {
 }
 /*Секція 2*/
 
-.benefits-icon::before{
-  content: '';
+.benefits-icon::before {
+  content: "";
   display: block;
   background-color: var(--color-background);
   height: 120px;
@@ -212,16 +212,16 @@ nav .current {
   background-repeat: no-repeat;
   background-position: center;
 }
-.icon-antenna::before{
+.icon-antenna::before {
   background-image: url(../images/antenna.svg);
 }
-.icon-clock::before{
+.icon-clock::before {
   background-image: url(../images/clock.svg);
- }
-.icon-diagram::before{
+}
+.icon-diagram::before {
   background-image: url(../images/diagram.svg);
- }
-.icon-astronaut::before{
+}
+.icon-astronaut::before {
   background-image: url(../images/astronaut.svg);
 }
 
@@ -290,52 +290,67 @@ nav .current {
   text-align: center;
   color: var(--color-second);
 }
-.icon-position{
+.icon-position {
   display: flex;
   justify-content: center;
   gap: 10px;
-  
-  }
-  .meta{
-    width: 44px;
-    height: 44px;   
-    border-radius: 50%;
-    
-    fill: var(--color-svg);
-  }
-  .name-socials:hover .meta{
-    fill: var(--color-fone);
-    background: var(--color-active);
-  }
+}
+.name-socials {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-svg);
+}
+.name-socials:hover,
+.name-socials:focus {
+  color: var(--color-fone);
+  background-color: var(--color-active);
+}
+.meta {
+  width: 20px;
+  height: 20px;
+
+  fill: currentColor;
+}
+
 /*Секція Постійні клієнти*/
 
-.clients-lists{
+.clients-lists {
   display: flex;
   justify-content: center;
   gap: 30px;
+}
+.clients-lists-link {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   cursor: pointer;
 }
-.clients-lists li{
-width: 170px;
-height: 92px;
-border: 1px solid #AFB1B8;
-border-radius: 4px;
-
+.clients-lists-link a {
+  color: var(--color-svg);
 }
-
-.client{
-  width: 44px;
-  height: 44px;
-  fill: var(--color-svg);
-  
-  position: relative;
-  top: 50%;
-  left: 50%;
+.client {
+  fill: currentColor;
 }
-.clients-lists li:hover{
+.clients-lists-link:hover {
   border: 1px solid #188ce8;
 }
-.clients-lists li:hover .client{
+.clients-lists-link:hover .client {
+  fill: var(--color-active);
+}
+.clients-lists-link:focus {
+  border: 1px solid #188ce8;
+}
+.clients-lists-link:focus .client {
   fill: var(--color-active);
 }
 
@@ -370,7 +385,8 @@ border-radius: 4px;
 .works-button:focus {
   color: var(--color-fone);
   background-color: var(--color-active);
-  }
+  outline: none;
+}
 
 .works-container {
   display: flex;
@@ -381,9 +397,13 @@ border-radius: 4px;
 .works-container-element:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
-.works-container-element:hover,
-.works-container-element:focus{
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+.works-container-element:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.works-container-element:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .works-box {
   padding: 24px 20px;
@@ -407,7 +427,11 @@ border-radius: 4px;
 }
 
 /*footer*/
+
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--color-backdark);
@@ -455,29 +479,44 @@ border-radius: 4px;
 .footer-contacts:focus {
   color: var(--color-active);
 }
-.socials-box{
-  margin-left: 516px;
- 
+.socials-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 70px;
+  outline: 2px solid red;
+
+  width: 206px;
+  height: 80px;
 }
-.socials{
+.socials {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--color-fone);
 }
-.footer-list{
+.footer-list {
   display: flex;
+  justify-content: center;
   gap: 10px;
 }
 
-.footer-meta{
-  
+.footer-socials {
   width: 44px;
   height: 44px;
   fill: var(--color-fone);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.footer-meta:hover {
-background-color: var(--color-active);
+.footer-socials:hover,
+.footer-socials:focus {
+  background-color: var(--color-active);
+}
+.footer-meta {
+  width: 20px;
+  height: 20px;
+  fill: var(--color-fone);
 }
